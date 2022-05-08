@@ -1,0 +1,15 @@
+<div class="top-image">
+  <div class="top-image__title">
+    Sky Manager
+  </div>
+</div>
+<nav class="nav">
+  <div class="nav__list">
+    <a class="nav__link" *ngFor="let item of this.navItems" [routerLink]="item.routerLink">
+      {{item.label}}
+    </a>
+  </div>
+</nav>
+<div class="router-content">
+  <router-outlet></router-outlet>
+</div>

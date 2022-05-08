@@ -1,0 +1,29 @@
+@import "../styles/all.scss";
+
+.d-app-button{
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  background-color: $theme-color;
+  color: white;
+  cursor: pointer;
+  transition-duration: 200ms;
+  font-size: 17px;
+  border-radius: 1px;
+
+  &:hover{
+    background-color: lighten($theme-color, 10)
+  }
+
+  &:active{
+    transition-duration: 100ms;
+    box-shadow: 0 0 3px 2px white inset;
+  }
+
+  &:disabled{
+    background-color: $theme-color;
+    cursor: unset;
+    box-shadow: unset;
+    color: rgb(207, 207, 207);
+  }
+}

@@ -1,0 +1,13 @@
+<div class="content">
+  <div class="header">Upload new Flights.</div>
+  <div class="subheader">Enter JSON data or import from file.</div>
+  <input type="file" style = "display: none;" accept=".json,.txt" #fileInput (change)="this.onFileChange(fileInput)">
+  <div class="buttons">
+    <button appButton class="buttons__button" (click) = "fileInput.click()">Select file</button>
+    <div class="buttons__label" *ngIf="!(this.errorMessage || this.successMessage)"></div>
+    <div class="buttons__label buttons__label--error" *ngIf="this.errorMessage">{{this.errorMessage}}</div>
+    <div class="buttons__label buttons__label--success" *ngIf="this.successMessage">{{this.successMessage}}</div>
+    <button [disabled]="this.invalidJSON || this.model.length === 0" appButton class="buttons__button">Upload</button>
+  </div>
+  <textarea [formControl] = "this.JSONControl" class="textarea" [class.textarea--invalid]="this.invalidJSON"></textarea>
+</div>
