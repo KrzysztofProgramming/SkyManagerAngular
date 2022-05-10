@@ -1,0 +1,36 @@
+@import "../../../styles/all.scss";
+
+:host{
+  display: flex;
+  flex-direction: column;
+  // min-height: 80vh;
+  align-items: center;
+}
+
+.header{
+  width: 100%;
+  text-align: center;
+}
+
+.top-nav{
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;  
+
+  &__link{
+    border-radius: 3px;
+  }
+}
+
+.router{
+  width: 95%;
+  align-self: center;
+  // background-color: $theme-color-2;
+  margin-top: 20px;
+  min-height: 60vh;
+  // box-shadow: 0 0 7px -1px black;
+  margin-bottom: 15px;
+}

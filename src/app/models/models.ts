@@ -1,3 +1,5 @@
+// export const SERVER_URL = "http://localhost:8080";
+
 export type DepartureIATACode = "SEA" | "YYZ" | "YYT" | "ANC" | "LAX";
 export type ArrivalIATACode =  "MIT" | "LEW" | "GDN" | "KRK" | "PPX";
 export type WeightUnit = "kg" | "lb";
@@ -36,9 +38,9 @@ export interface FlightData{
 }
 
 export function isFlight(value: Object): boolean{
-  return 'flightNumber' in value;
+  return 'flightNumber' in value && 'flightId' in value;
 }
 
-export function isFlightLoad(value: Object): boolean{
-  return "weight" in value;
+export function isFlightData(value: Object): boolean{
+  return "flightId" in value && "baggage" in value;
 }

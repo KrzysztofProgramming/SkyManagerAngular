@@ -9,7 +9,8 @@
   cursor: pointer;
   transition-duration: 200ms;
   font-size: 17px;
-  border-radius: 1px;
+  border-radius: 3px;
+  user-select: none;
 
   &:hover{
     background-color: lighten($theme-color, 10)

@@ -1,0 +1,14 @@
+<form class="form" [formGroup]="this.form" (ngSubmit)="this.submit.emit()">
+  <p class="subheader" >From:</p>
+  <p-calendar class="date" formControlName="dateStart" placeholder="date" dateFormat="mm-dd-yy"
+   (onBlur)="this.callOnTouche()"></p-calendar>
+  <p class="subheader">To:</p>
+  <p-calendar class="date" formControlName="dateEnd" placeholder="date" dateFormat="mm-dd-yy"
+  (onBlur)="this.callOnTouche()"></p-calendar>
+  <p class="subheader">{{this.mode === "iata" ? 'Aiport IATA:' : "Flight number:"}}</p>
+  <p-inputNumber class="number" *ngIf="this.mode === 'number'" formControlName="codeOrNumber" placeholder="number" [min]=0
+  (onBlur)="this.callOnTouche()" (keydown.enter) = "this.trySubmit()"></p-inputNumber>
+  <input class="code" *ngIf="this.mode === 'iata'" formControlName="codeOrNumber" pInputText placeholder="IATA"
+  (onBlur)="this.callOnTouche()">
+  <button type="submit" style="display: none"></button>
+</form>

@@ -68,8 +68,24 @@
 
 }
 
-.router-content{
+.router{
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex: 1;
+  background-color: $theme-color-2;
+
+  &__container{
+    box-shadow: 0 0 7px -1px black;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: white;
+    max-width: $max-router-width;
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }

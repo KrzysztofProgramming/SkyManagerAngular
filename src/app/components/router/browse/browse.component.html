@@ -1,1 +1,8 @@
-<p>browse works!</p>
+<h2 class="header">Check statistics</h2>
+<div class="top-nav">
+  <a class="top-nav__link" routerLink="iata" appButton queryParamsHandling="merge">By IATA code</a>
+  <a class="top-nav__link" routerLink="number" appButton queryParamsHandling="merge">By flight number</a>
+</div>
+<div class="router">
+  <router-outlet></router-outlet>
+</div>

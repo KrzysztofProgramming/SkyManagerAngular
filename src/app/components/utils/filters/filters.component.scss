@@ -1,0 +1,43 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  // max-width: 500px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.date{
+  width: 100%;
+}
+
+.subheader{
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
+
+.code{
+  width: 100%;
+  min-width: unset
+}
+
+:host ::ng-deep{
+  .p-calendar{
+    width: 100%;
+  }
+
+  .p-inputnumber{
+    width: 100%;
+    min-width: 0;
+
+    &-input{
+      min-width: 0;
+    }
+  }
+}
