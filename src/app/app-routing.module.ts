@@ -10,7 +10,7 @@ const routes: Routes = [
     {path: 'number', component: BrowseIataComponent}
   ]},
   {path: 'upload', component: UploadComponent},
-  {path: '', redirectTo: 'browse', pathMatch: 'full'}
+  {path: '', redirectTo: 'browse/number', pathMatch: 'full'}
 ];
 
 @NgModule({

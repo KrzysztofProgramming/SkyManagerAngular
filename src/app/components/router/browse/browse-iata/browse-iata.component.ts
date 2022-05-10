@@ -61,6 +61,7 @@ export class BrowseIataComponent implements OnInit, OnDestroy {
     model.dateStart = params['dateStart'] ? new Date(Date.parse(params['dateStart'])) : undefined;
     model.dateEnd = params['dateEnd'] ? new Date(Date.parse(params['dateEnd'])) : undefined;
     this.filtersControl.setValue(model);
+    this.response = undefined;
     this.cd.markForCheck();
     setTimeout(() => {
       this.sendRequest();
