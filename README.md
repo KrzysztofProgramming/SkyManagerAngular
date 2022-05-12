@@ -1,5 +1,9 @@
 # SkyManagerAngular
-Simple web UI for adding Flight data and retrieve statistics from the server
+Simple web UI for adding Flight data and retrieve statistics from the server  
+Backend available [here](https://github.com/KrzysztofProgramming/SkyManagerSpring)
+
+## Youtube showcase:
+https://youtu.be/X8-btq3Z6gY
 
 ## Images:
 ![image](https://user-images.githubusercontent.com/61599048/167660611-10cd80ea-7921-408c-83d7-ad9bb031e373.png)
