@@ -2,10 +2,10 @@
   <app-filters [mode]="this.mode" class="filters" name="filters" [formControl] = "this.filtersControl" (submit)="this.navigateToParams()"></app-filters>
   <div class="stats">
     <div class="stats__wrapper" *ngIf="this.response && this.mode === 'iata'">
-      <p>Arrival planes: {{this.iataResponse.arrivalCount}}</p>
-      <p>Departure planes: {{this.iataResponse.departureCount}}</p>
-      <p>Arrival pieces: {{this.iataResponse.arrivalPieces}}</p>
-      <p>Departure pieces: {{this.iataResponse.departurePieces}}</p>
+      <p>Arrived planes: {{this.iataResponse.arrivalCount}}</p>
+      <p>Departured planes: {{this.iataResponse.departureCount}}</p>
+      <p>Arrived pieces: {{this.iataResponse.arrivalPieces}}</p>
+      <p>Departured pieces: {{this.iataResponse.departurePieces}}</p>
     </div>
     <div class="stats__wrapper" *ngIf="this.response && this.mode === 'number'">
       <p>Baggage weight: {{this.numberResponse.baggageWeight | number: '1.3-3'}} kg</p>
